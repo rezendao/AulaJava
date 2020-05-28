@@ -66,11 +66,10 @@ public class PessoaView {
     }
 
     private static void cadastrar() {
-        String nome = inputString("Qual o nome?");
-        int idade = inputInt("Qual a idade?");
-        String email = inputString("Qual o email?");
-
-        PessoaBean nova = new PessoaBean(nome, idade, email);
+        PessoaBean nova = new PessoaBean(
+                inputString("Qual o nome?"),
+                inputInt("Qual a idade?"),
+                inputString("Qual o email?"));
 
         PessoaControl.getInstance().create(nova);
     }
